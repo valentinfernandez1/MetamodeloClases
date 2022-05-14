@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/AccelerateMLC/src-gen" creationIcons="false" editDirectory="/AccelerateMLC.edit/src-gen"
+    editorDirectory="/AccelerateMLC.editor/src-gen" modelPluginID="AccelerateMLC"
+    modelName="AccelerateMLC" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>accelerateMLC.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="AccelerateMLC" disposableProviderFactory="true" ecorePackage="accelerateMLC.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="accelerateMLC.ecore#//AtributeType">
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//AtributeType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//AtributeType/date"/>
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//AtributeType/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//AtributeType/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//AtributeType/double"/>
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//AtributeType/Object"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="accelerateMLC.ecore#//HttpMethod">
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//HttpMethod/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//HttpMethod/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//HttpMethod/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="accelerateMLC.ecore#//HttpMethod/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="accelerateMLC.ecore#//Diagram">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Diagram/contained_Entitypackages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Diagram/route"/>
+    </genClasses>
+    <genClasses ecoreClass="accelerateMLC.ecore#//Classifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Classifier/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Classifier/inherits"/>
+    </genClasses>
+    <genClasses ecoreClass="accelerateMLC.ecore#//Class">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Class/hasRoutes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Class/isAbstract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Class/atributes_contained"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Class/containedRelationships"/>
+    </genClasses>
+    <genClasses ecoreClass="accelerateMLC.ecore#//Inheritance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Inheritance/origin"/>
+    </genClasses>
+    <genClasses ecoreClass="accelerateMLC.ecore#//Relationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Relationship/relationshipName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Relationship/required"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Relationship/destination"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Relationship/origin"/>
+    </genClasses>
+    <genClasses ecoreClass="accelerateMLC.ecore#//Atribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Atribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Atribute/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Atribute/atributeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Atribute/isUnique"/>
+    </genClasses>
+    <genClasses ecoreClass="accelerateMLC.ecore#//Namespace">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Namespace/route_methods"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Namespace/name"/>
+    </genClasses>
+    <genClasses ecoreClass="accelerateMLC.ecore#//Route">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Route/httpMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Route/pathExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Route/requiresAuth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Route/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="accelerateMLC.ecore#//EntityPackage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//EntityPackage/contained_classifiers"/>
+    </genClasses>
+    <genClasses ecoreClass="accelerateMLC.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accelerateMLC.ecore#//Resource/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference accelerateMLC.ecore#//Resource/method"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
